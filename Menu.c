@@ -1,15 +1,15 @@
 #include <stdio.h>
-#include <wchar.h>
-#include <locale.h>
+
 #include <stdlib.h>
-#include<stdbool.h>
+#include <stdbool.h>
 #include "Menu.h"
 #include "usuario.h"
 #include "usuario.c"
 
 void Menu(){
+    printf("\n -----------------------------------------------------------");
     printf("\n Bienvenido a la libreria digital");
-
+    printf("\n -----------------------------------------------------------");
     Opciones();
 
 }
@@ -58,8 +58,9 @@ scanf("%c",&c);
 void MUsuarios(){
 char c;
 bool f=false;
-
+printf("\n -----------------------------------------------------------");
 printf("\n Bienvenido al menu de Usuarios");
+printf("\n -----------------------------------------------------------");
     while(f==false){
     printf("\n 1 Para crear un usuario");
     printf("\n 2 Para iniciar sesion");
@@ -77,7 +78,7 @@ printf("\n Bienvenido al menu de Usuarios");
             case'2':
                 printf("\n Numero DNI");
                 scanf("%s",&user.dni);
-                printf("\n Contraseña");
+                printf("\n Contrasenya");
                 scanf("%s",&user.con);
                 char *nomfich="usuario.txt";
                 buscarUsuario(*nomfich,user.dni,user.con);
