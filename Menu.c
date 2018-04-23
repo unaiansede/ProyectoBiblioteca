@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include<stdbool.h>
 #include "Menu.h"
+#include "usuario.h"
+#include "usuario.c"
 
 void Menu(){
     printf("\n Bienvenido a la libreria digital");
@@ -61,16 +63,18 @@ printf("\n Bienvenido al menu de Usuarios");
     printf("\n 1 Para iniciar sesion");
     printf("\n 9 Para salir");
     scanf("%c",&c);
-        switch(c){
-        case '1':
-        InicioSesion();
-        f=true;
-        break;
+        tUsuario user;
 
-        case '9':
-        printf("\n Adios");
-        f=true;
-        break;
+        switch(c){
+            case '1':
+                user= pedirUsuario();
+                f=true;
+                break;
+
+            case '9':
+            printf("\n Adios");
+            f=true;
+            break;
 
         }
 

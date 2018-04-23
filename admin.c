@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../Desktop/ProyectoLibreria/admin.h"
+#include "admin.h"
 #include "string.h"
-#include "../../Desktop/ProyectoLibreria/usuario.h"
-#include "../../Desktop/ProyectoLibreria/libro.h"
+
 
 
 

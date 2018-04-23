@@ -2,10 +2,12 @@
 #include <mem.h>
 #include <malloc.h>
 #include "usuario.h"
+#include "stdbool.h"
 
 tUsuario pedirUsuario(){
     tUsuario u;
-
+    bool t =false;
+do {
     printf("\nIntroduce el nombre de usuario: ");
     fflush(stdin);
     gets(u.nom);
@@ -16,6 +18,8 @@ tUsuario pedirUsuario(){
     fflush(stdin);
     gets(u.dni);
     u.numLibros = 0;
+    t=true;
+}while(t=false);
 
     return u;
 }
