@@ -58,16 +58,29 @@ scanf("%c",&c);
 void MUsuarios(){
 char c;
 bool f=false;
+
 printf("\n Bienvenido al menu de Usuarios");
-    do{
-    printf("\n 1 Para iniciar sesion");
+    while(f==false){
+    printf("\n 1 Para crear un usuario");
+    printf("\n 2 Para iniciar sesion");
     printf("\n 9 Para salir");
+    fflush(stdin);
     scanf("%c",&c);
         tUsuario user;
 
         switch(c){
             case '1':
                 user= pedirUsuario();
+                f=true;
+                break;
+
+            case'2':
+                printf("\n Numero DNI");
+                scanf("%s",&user.dni);
+                printf("\n Contraseña");
+                scanf("%s",&user.con);
+                char *nomfich="usuario.txt";
+                buscarUsuario(*nomfich,user.dni,user.con);
                 f=true;
                 break;
 
@@ -79,7 +92,7 @@ printf("\n Bienvenido al menu de Usuarios");
         }
 
 
-    }while (f==false);
+    }
 }
 void MAdministradores(){
 char e;
