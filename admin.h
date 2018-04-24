@@ -9,7 +9,6 @@ typedef struct{
     char pass[20];
 }Administrador;
 
-void crearUsuario(tUsuario* aUsuarios,char* nomfich);
 void modificarUsuario(tUsuario* aUusuarios,char* nomfich,char* dni,char* con);
 void eliminarUsuario(tUsuario* aUusuarios,char* nomfich,char* dni);
 void crearLibro(Libro* aLibros,char* nomfich);
