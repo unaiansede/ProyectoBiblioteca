@@ -80,3 +80,21 @@ void registrarLibro(char *nomfich){
     }
 }
 
+void mostrarLibro(char *nomfich){
+    FILE* fichero;
+    fichero = fopen(nomfich, "r");
+
+    int lectura;
+    char c;
+    while(lectura != EOF){
+        lectura = fgetc(fichero);
+        c = (char) lectura;
+        printf("%c", c);
+    }
+    if(fclose(fichero) == EOF){
+        printf("c mamut");
+    } else{
+        printf("\nok.");
+    }
+}
+
