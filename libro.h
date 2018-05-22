@@ -6,7 +6,6 @@ typedef struct{
     char titulo[50];
     char isbn[13];
     char autor[20];
-    char
 }Libro;
 
 void escogerLibro(Libro *aLibros, int tamanyo, char *isbn);
